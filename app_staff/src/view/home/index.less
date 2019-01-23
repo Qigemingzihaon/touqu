@@ -1,0 +1,227 @@
+.Home {
+    .product_big {
+        width: 7.5rem;
+        height: 7.42rem;
+        background-color: #ffffff;
+        box-shadow: 0 0 0.21rem 0 rgba(135, 135, 135, 0.28);
+        padding: 0.5rem;
+        img {
+            height: 100%;
+        }
+    }
+    .product_little {
+        position: relative;
+        .swiper-container {
+            width: 100%;
+            height: 2.44rem;
+            padding: 0.45rem 0;
+            // overflow: auto;
+        }
+        .swiper-slide {
+            width: 1.78rem;
+            .img_swiper {
+                width: 1.52rem;
+                height: 1.54rem;
+                margin: 0 0.13rem;
+                background-color: #ffffff;
+                border-radius: 0.12rem;
+                padding: 0.2rem;
+                img {
+                    height: 100%;
+                }
+            }
+            .checked {
+                box-shadow: 0 0 0.18rem 0.03rem rgba(254, 80, 60, 0.6);
+            }
+        }
+        .swiper-button {
+            width: 100%;
+            height: 1rem;
+            position: absolute;
+            top: 2rem;
+            z-index: 100;
+
+        }
+        .button {
+            font-family: PingFang-SC-Medium;
+            font-size: 0.26rem;
+            letter-spacing: 0;
+            color: #999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .left{
+                   transform:rotate(180deg); 
+                }
+            }
+            .center{
+                margin: 0 0.56rem;
+            }
+            img {
+                width: 0.52rem;
+                height: 0.28rem;
+            }
+        }
+    }
+    .btn {
+        width: 3.03rem;
+        height: 0.82rem;
+        // background-image: linear-gradient(0deg, #ff4e3a 13%, #facbb3 100%);
+        border-radius: 0.41rem;
+        font-size: 0.3rem;
+        line-height: 0.82rem;
+        text-align: center;
+        letter-spacing: 0;
+        color: #ffffff;
+        margin-left: 2.23rem;
+        margin-top: 0.47rem;
+        position: relative;
+        img {
+            width: 3.03rem;
+            position: absolute;
+            top: -0.02rem;
+            left: 0;
+            z-index: 1;
+        }
+        div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 10;
+        }
+    }
+    .swiper-pagination {
+        width: 100%;
+        margin-top: 0.3rem;
+    }
+    .shade {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1000;
+        .content {
+            width: 5.76rem;
+            height: 7.01rem;
+            background-color: #ffffff;
+            border-radius: 0.1rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -2.88rem;
+            margin-top: -3.505rem;
+            .title {
+                width: 100%;
+                font-family: PingFang-SC-Medium;
+                font-size: 0.42rem;
+                line-height: 0.42rem;
+                margin-top: 0.27rem;
+                margin-bottom: 0.24rem;
+                letter-spacing: 0.02rem;
+                color: #333333;
+            }
+            .item {
+                width: 100%;
+                height: 1rem;
+                padding: 0 0.58rem;
+                // background-color: #ff4e3a;
+                margin-top: 0.09rem;
+                display: flex;
+                justify-content: left;
+                .imgdiv {
+                    width: 0.41rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .name {
+                        width: 100%;
+                    }
+                    .tel {
+                        width: 0.3rem;
+                    }
+                    .verify {
+                        width: 0.4rem;
+                    }
+                    .address {
+                        width: 0.39rem;
+                    }
+                }
+                .inputdiv {
+                    width: 4.12rem;
+                    height: 100%;
+                    border-bottom: 1px solid #ddd;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    input {
+                        background: none;
+                        outline: none;
+                        border: 0;
+                        padding: 0 0 0 0.26rem;
+                    }
+                    position: relative;
+                    .btn_s {
+                        position: absolute;
+                        right: 0;
+                        width: 1.73rem;
+                        height: 0.56rem;
+                        background-color: #ff4e3a;
+                        border-radius: 0.08rem;
+                        font-family: PingFang-SC-Regular;
+                        font-size: 0.28rem;
+                        line-height: 0.56rem;
+                        letter-spacing: 0.01rem;
+                        color: #ffffff;
+                        .btn_n {
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0.08rem;
+                            background-color: #b2b2b2;
+                            color: #000;
+                        }
+                        .l {
+                            width: 0.01rem;
+                            height: 0.57rem;
+                            background-color: #dddddd;
+                            position: absolute;
+                            left: -0.26rem;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            .bttn {
+                margin-top: 0.5rem;
+                div {
+                    width: 4.6rem;
+                    height: 0.9rem;
+                    background-color: #ff4e3a;
+                    border-radius: 0.45rem;
+                    font-family: PingFang-SC-Regular;
+                    font-weight: 200;
+                    font-size: 0.32rem;
+                    line-height: 0.9rem;
+                    letter-spacing: 0.01rem;
+                    color: #ffffff;
+                    img {
+                        width: 0.57rem;
+                        height: 0.3rem;
+                        position: relative;
+                        top: 0.05rem;
+                        left: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
