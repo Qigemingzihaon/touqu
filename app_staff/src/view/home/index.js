@@ -112,11 +112,16 @@ export default {
             }
             this.verifytime = this.verifytime - 1
           }, 1000)
-        } else {
+        } else if(res.status == 2) {
           Toast({
-            mes: '请重试！',
+            mes: res.message,
             timeout: 1500,
           })
+        }else{
+          Toast({
+            mes: '请稍后重试',
+            timeout: 1500,
+          })          
         }
       })
     },

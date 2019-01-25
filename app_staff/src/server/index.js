@@ -3,10 +3,10 @@ import axios from 'axios'
 import { getSSession } from '../utils/session.js'
 import signCkeck from '../utils/sign.js'
 // export let baseURL ='http://hsz.jollykeys.cn:8095/newspring/';
-export let baseURL ='http://112.74.183.29:8095/newspring/';
+export let baseURL ='https://www.7hmall.com/newspring/';
 const instance = axios.create({
     // baseURL: 'http://hsz.jollykeys.cn:8095/newspring/',
-    baseURL: 'http://112.74.183.29:8095/newspring/',
+    baseURL: 'https://www.7hmall.com/newspring/',
     headers: {
         'Content-Type': 'application/json'
       }

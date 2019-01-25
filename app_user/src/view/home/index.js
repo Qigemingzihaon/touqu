@@ -148,11 +148,16 @@ export default {
             }
             this.verifytime = this.verifytime - 1
           }, 1000)
-        } else {
+        } else if(res.status == 2) {
           Toast({
-            mes: '请重试！',
+            mes: res.message,
             timeout: 1500,
           })
+        }else{
+          Toast({
+            mes: '请稍后重试',
+            timeout: 1500,
+          })          
         }
       })
     },
@@ -344,8 +349,6 @@ export default {
       this.shade=true;//遮罩层显示
       this.rule=false;//规则关闭
       this.Lottery=false;//开奖弹框
-      this.Winning=false;//是否中奖
-      this.icon=false;//是否显示图标
       this.address=false;//填写地址
       this.redpacket=false;
       this[key]=true;
@@ -376,6 +379,7 @@ export default {
     },
     //得到抽奖信息
     returncoll(award){
+      console.log(award)
       if(award==''){
         if(this.drawNumber==0){
           this.Toastcoll('沒有抽奖次数了~')

@@ -1,4 +1,5 @@
-import { getSSession, setSSession } from '@/utils/session.js'
+import { getSSession, setSSession,clearSSession } from '@/utils/session.js'
+import { baseURL } from '@/utils/share.js'
 import { postlogin } from '@/server/index.js'
 import { Alert, Toast } from 'vue-ydui/dist/lib.rem/dialog';
 export default {
@@ -71,11 +72,13 @@ export default {
     },
     getcodecoll() {
       let str = location.href //取得整个地址栏
+      clearSSession('access_token');
       if(this.getQueryString('peopid', str)){
         setSSession('peopid', this.getQueryString('peopid', str))
       }
-      let appid = 'wx272bfdf846d9d6ea'
-      let url = 'http://www.jollykeys.cn/newspring_user/'
+      let appid = 'wx272bfdf846d9d6ea';
+      // let url = 'https://www.jollykeys.cn/newspring_user/';
+      let url = baseURL;
       if (!this.getQueryString('code', str)||(!getSSession('access_token') && !this.getQueryString('code', str))) {
         window.location.href =
           'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' +
