@@ -4,8 +4,8 @@
       <img :src="url" alt="">
     </div>
     <div class="btn">
-      <div @click="toHome"><div>重新制作</div></div>
       <div><div>长按保存图片<img :src="url" alt=""></div></div>
+      <div @click="toHome"><div>重新制作</div></div>
     </div>
   </div>
 </template>

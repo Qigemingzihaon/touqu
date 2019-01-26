@@ -4,8 +4,8 @@
       <img :src="url" alt="">
     </div>
     <div class="btn">
+      <div><div>长按保存图片分享给好友<img :src="url" alt=""></div></div>
       <div><div @click="toHome">返回</div></div>
-      <div><div>长按保存图片<img :src="url" alt=""></div></div>
     </div>
   </div>
 </template>

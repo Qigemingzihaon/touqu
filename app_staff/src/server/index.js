@@ -100,6 +100,11 @@ export function setmessage (params={}){
     params.token = getSSession('access_token');
     return instance.post('/setmessage',params)
 }
+//刷新一个海报id
+export function refreshpeopid (params={}){
+    params.token = getSSession('access_token');
+    return instance.post('/refreshpeopid',params)
+}
 //生成并获取海报图片
 export function getposter (params={}){
     params.token = getSSession('access_token');

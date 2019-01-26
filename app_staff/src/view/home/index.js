@@ -3,6 +3,7 @@ import {
   getposter,
   setmessage,
   getcode,
+  refreshpeopid
 } from '@/server/index.js'
 import { getSSession, setSSession } from '@/utils/session.js'
 import { wx_share } from '@/utils/wxinit.js'
@@ -213,6 +214,24 @@ export default {
           }
         })
     },
+    refreshpeopidcoll(){
+      let data = {
+        peopid:getSSession('peopid')
+      }
+      if(!this.request){
+        return
+      }
+      this.request=false;
+      refreshpeopid(data).then((res, err) => {
+        // console.log(res,err)
+        this.request=true;
+        if (res.status == 1) {
+          setSSession('peopid', res.data.peopid)
+        } else {
+          this.Toastcoll(res.message)
+        }
+      })
+    },
     checkedcoll(index){
       this.checkedindex = index;
       this.checkedlist = this.productlist[index];
@@ -290,12 +309,13 @@ export default {
     if(getSSession('productlist')){
       this.productlist=JSON.parse(getSSession('productlist'));
       this.shadeshow=false;
+      this.refreshpeopidcoll();
     }else{
       setSSession('peopid', '')
     }
     this.checkedlist = this.productlist[0];
     this.checkedindex = 0;
-    // setSSession('access_token', '17_nAfh2VwGZ7GVEXVR_WRgKM2VN4gIJ1-OU_spgUZfFM1CIJ3LElFq365Pwcwp-KopAi-wM5INqAepJG5Bg0s_jA')
+    // setSSession('access_token', '18_TyAuXpLjLz0Xt0v1sfjTGDF55dDDK32ptloIy5GWTVyvKRM-hace7Hkp5dgapA9wQ7ZyLMs61mrCU-kL-uRPEg')
   },
   mounted() {
     setTimeout(() => {
